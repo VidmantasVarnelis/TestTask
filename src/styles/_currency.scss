@@ -1,0 +1,57 @@
+.coin {
+	&__img {
+		width: 50px;
+		object-fit: contain;
+	}
+	&__header-flex {
+		display: flex;
+		align-items: center;
+	}
+	&__button-container {
+		background-color: white;
+		border-radius: 1rem;
+		margin: 1rem 0;
+		width: 100%;
+	}
+	&__button {
+		padding: 1rem;
+		border: 0;
+		background-color: transparent;
+		width: 100%;
+		cursor: pointer;
+	}
+	&__button-inner-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left-inner-container {
+		padding-left: 1rem;
+		span {
+			color: #888888;
+			font-weight: normal;
+			font-size: 1rem;
+		}
+		p {
+			color: #333333;
+			text-align: left;
+		}
+	}
+	&__right-outter-flex {
+		display: flex;
+		align-items: center;
+		svg {
+			margin-left: 1rem;
+		}
+	}
+	&__right-inner-flex {
+		display: flex;
+		align-items: center;
+		&:not(&:last-child) {
+			padding-bottom: 0.5rem;
+		}
+		svg {
+			margin-right: 0.5rem;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.information {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 2rem;
+	gap: 1rem;
+	&__desc {
+		grid-column: span 3;
+	}
+	a {
+		text-decoration: none;
+		color: royalblue;
+		font-weight: 600;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	p {
+		color: #3f3f3f;
+		overflow: hidden;
+	}
+}
