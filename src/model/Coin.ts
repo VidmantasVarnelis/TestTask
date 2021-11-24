@@ -13,7 +13,7 @@ export interface ICoinInformation {
 	symbol: string;
 	hashing_algorithm: number;
 	description: { en: string };
-	links: { homepage: [] };
+	links: { homepage: any };
 	market_data: { market_cap: { eur: number } };
 	genesis_date: string;
 }
