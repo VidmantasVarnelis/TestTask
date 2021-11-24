@@ -6,7 +6,6 @@ interface Props {
 	info: ICoinInformation | null;
 }
 const CurrancyInfo: React.FC<Props> = ({ info }) => {
-	console.log(`info`, info?.links.homepage);
 	return (
 		<div>
 			{info ? (
