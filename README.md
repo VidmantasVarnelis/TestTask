@@ -1,4 +1,4 @@
-# Testing Task for Project
+#  Task for EPAM Project
 
 # To install dependecies
 
