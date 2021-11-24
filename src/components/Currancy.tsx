@@ -4,7 +4,7 @@ import {
 	BsArrowDownCircleFill,
 	BsChevronDown,
 } from 'react-icons/bs';
-import { CoinApi } from 'src/hooks/Api';
+import { CoinInfoApi } from 'src/hooks/Api';
 import { ICoin } from 'src/model/Coin';
 import CurrancyInfo from './CurrancyInfo';
 
@@ -15,7 +15,7 @@ interface Props {
 const Currancy: React.FC<Props> = (props) => {
 	const [collapse, setCollapse] = useState<boolean>(false);
 	const { coin } = props;
-	const { coinInfoState } = CoinApi(coin.id, collapse);
+	const { coinInfoState } = CoinInfoApi(coin.id, collapse);
 	return (
 		<div className='coin__button-container'>
 			<button

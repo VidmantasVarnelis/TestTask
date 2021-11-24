@@ -26,7 +26,7 @@ export const ListApi = () => {
 	}, []);
 	return { coinsState };
 };
-export const CoinApi = (id: number, collapseState: boolean) => {
+export const CoinInfoApi = (id: number, collapseState: boolean) => {
 	const [coinInfoState, setCoinInfoState] = useState<ICoinInformation | null>(
 		null
 	);
