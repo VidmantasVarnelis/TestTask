@@ -19,6 +19,13 @@
 		background-color: transparent;
 		width: 100%;
 		cursor: pointer;
+		transition: all 200ms ease-in-out;
+		position: relative;
+		overflow: hidden;
+		&:active {
+			background-color: rgb(226, 226, 226);
+			border-radius: 1rem;
+		}
 	}
 	&__button-inner-flex {
 		display: flex;

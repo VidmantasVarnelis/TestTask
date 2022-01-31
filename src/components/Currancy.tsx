@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
 	BsArrowUpCircleFill,
 	BsArrowDownCircleFill,
@@ -16,11 +16,32 @@ const Currancy: React.FC<Props> = (props) => {
 	const [collapse, setCollapse] = useState<boolean>(false);
 	const { coin } = props;
 	const { coinInfoState } = CoinInfoApi(coin.id, collapse);
+	const ref = useRef<HTMLButtonElement>(null);
+	const Ripple = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+		const parentEl = ref.current;
+		const bounds = parentEl?.getBoundingClientRect();
+		if (parentEl && bounds) {
+			const clientX = e.clientX - bounds.left;
+			const clienty = e.clientY - bounds.top;
+			const spanEl = document.createElement('span');
+			spanEl.style.left = `${clientX}px`;
+			spanEl.style.top = `${clienty}px`;
+			spanEl.className = 'testinu';
+			parentEl.append(spanEl);
+		}
+		setTimeout(() => {
+			parentEl?.removeChild(parentEl.childNodes[1]);
+		}, 1000);
+	};
 	return (
 		<div className='coin__button-container'>
 			<button
+				ref={ref}
 				key={coin.id}
-				onClick={() => setCollapse((prevState) => !prevState)}
+				onClick={(e) => {
+					setCollapse((prevState) => !prevState);
+					Ripple(e);
+				}}
 				className='coin__button'
 			>
 				<div className='coin__button-inner-flex'>

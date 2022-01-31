@@ -22,7 +22,9 @@ const CurrancyInfo: React.FC<Props> = ({ info }) => {
 						<h4>Market Cap</h4>
 						<p>{isDataNotNull(info.market_data.market_cap.eur)}</p>
 					</div>
-					<a href={info.links.homepage[0]}>Home Page</a>
+					<div>
+						<a href={info.links.homepage[0]}>Home Page</a>
+					</div>
 					<div>
 						<h4>Hashing algorithm</h4>
 						<p>{isDataNotNull(info.hashing_algorithm)}</p>
